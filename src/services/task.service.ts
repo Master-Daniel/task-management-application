@@ -9,12 +9,15 @@ export class TaskService {
     @InjectRepository(Task) private readonly taskRepo: EntityRepository<Task>,
   ) {}
 
-  async create(description: string): Promise<Task> {
+  async create(description: string): Promise<{ message: string; task?: Task }> {
     const task = this.taskRepo.create({ description, status: 'active' });
     const em: EntityManager = this.taskRepo.getEntityManager();
     em.persist(task);
     await em.flush();
-    return task;
+    return {
+      message: 'Task created successfully',
+      task,
+    };
   }
 
   async findAll(status?: 'active' | 'completed' | 'all'): Promise<Task[]> {
