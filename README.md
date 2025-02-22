@@ -32,6 +32,17 @@
 $ npm install
 ```
 
+## Setup environment variables
+Create a .env file at the root of the project and add the following variables with their corresponding values
+
+``` env
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=task_db
+```
+
 ## Compile and run the project
 
 ```bash
