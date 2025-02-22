@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A task management application using [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Project setup
 
