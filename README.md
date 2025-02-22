@@ -32,6 +32,12 @@ A task management application using [Nest](https://github.com/nestjs/nest) frame
 $ npm install
 ```
 
+ensure you have mikro-orm installed
+
+```bash
+$ npm install --save-dev @mikro-orm/cli
+```
+
 ## Setup environment variables
 Create a .env file at the root of the project and add the following variables with their corresponding values
 
@@ -41,6 +47,14 @@ DB_PORT=3306
 DB_USER=root
 DB_PASSWORD=
 DB_NAME=task_db
+```
+
+## Run the migrations
+
+ensure database name specified in the .env file is already created
+
+```bash
+$ npx mikro-orm migration:up
 ```
 
 ## Compile and run the project
